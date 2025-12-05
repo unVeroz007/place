@@ -1,0 +1,162 @@
+{
+    "project_info": {
+        "name": "Sistem Pengenalan Bahasa Isyarat BISINDO",
+        "topic": "JST untuk Pengenalan Pola",
+        "framework": "TensorFlow/Keras"
+    },
+    "dataset_info": {
+        "name": "indonesian-sign-language-bisindo",
+        "train_path": "/kaggle/input/indonesian-sign-language-bisindo/bisindo/images/train",
+        "val_path": "/kaggle/input/indonesian-sign-language-bisindo/bisindo/images/val",
+        "train_samples": 9169,
+        "val_samples": 2301,
+        "num_classes": 26,
+        "class_names": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"
+        ],
+        "class_indices": {
+            "A": 0,
+            "B": 1,
+            "C": 2,
+            "D": 3,
+            "E": 4,
+            "F": 5,
+            "G": 6,
+            "H": 7,
+            "I": 8,
+            "J": 9,
+            "K": 10,
+            "L": 11,
+            "M": 12,
+            "N": 13,
+            "O": 14,
+            "P": 15,
+            "Q": 16,
+            "R": 17,
+            "S": 18,
+            "T": 19,
+            "U": 20,
+            "V": 21,
+            "W": 22,
+            "X": 23,
+            "Y": 24,
+            "Z": 25
+        }
+    },
+    "model_config": {
+        "image_size": "128x128",
+        "batch_size": 32,
+        "epochs_tuning": 15,
+        "epochs_final": 30,
+        "architecture": "CNN dengan 4 blok konvolusi",
+        "total_parameters": 8920538
+    },
+    "best_hyperparameters": {
+        "experiment": "Exp4-RMSprop-L2",
+        "optimizer": "rmsprop",
+        "learning_rate": 0.001,
+        "regularization": "l2",
+        "dropout_rate": 0.5
+    },
+    "training_results": {
+        "final_train_accuracy": 0.8263714909553528,
+        "final_val_accuracy": 0.8935245275497437,
+        "best_val_accuracy": 0.9152542352676392,
+        "final_train_loss": 1.5121440887451172,
+        "final_val_loss": 1.2460498809814453,
+        "best_val_loss": 1.1954442262649536,
+        "epochs_trained": 30
+    },
+    "evaluation_results": {
+        "loss": 1.1954442262649536,
+        "accuracy": 0.9048240184783936,
+        "precision": 0.9498343467712402,
+        "recall": 0.8722294569015503,
+        "auc": 0.9974856972694397
+    },
+    "per_class_accuracy": {
+        "mean": 0.9048647472781883,
+        "std": 0.07313686661437274,
+        "min": 0.7078651685393258,
+        "max": 1.0,
+        "top_5_classes": [
+            {
+                "Kelas": "H",
+                "Accuracy": 1.0,
+                "Support": 87
+            },
+            {
+                "Kelas": "O",
+                "Accuracy": 0.9888888888888889,
+                "Support": 90
+            },
+            {
+                "Kelas": "W",
+                "Accuracy": 0.9666666666666667,
+                "Support": 90
+            },
+            {
+                "Kelas": "E",
+                "Accuracy": 0.9662921348314607,
+                "Support": 89
+            },
+            {
+                "Kelas": "B",
+                "Accuracy": 0.9659090909090909,
+                "Support": 88
+            }
+        ],
+        "bottom_5_classes": [
+            {
+                "Kelas": "J",
+                "Accuracy": 0.8222222222222222,
+                "Support": 90
+            },
+            {
+                "Kelas": "X",
+                "Accuracy": 0.8202247191011236,
+                "Support": 89
+            },
+            {
+                "Kelas": "N",
+                "Accuracy": 0.8181818181818182,
+                "Support": 88
+            },
+            {
+                "Kelas": "Q",
+                "Accuracy": 0.7586206896551724,
+                "Support": 87
+            },
+            {
+                "Kelas": "M",
+                "Accuracy": 0.7078651685393258,
+                "Support": 89
+            }
+        ]
+    }
+}
